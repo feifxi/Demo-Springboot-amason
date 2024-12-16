@@ -24,7 +24,7 @@ public class AuthFilter implements Filter {
             // API route
             response.sendError(400,"Not logged in");
         }
-        else if (url.startsWith("/cart") && (user == null || cart == null)) {
+        else if ((user == null || cart == null) && (url.startsWith("/cart") || url.startsWith("/delete"))) {
             response.sendRedirect("/login");
         }
         else if (url.startsWith("/login") && (user != null || cart != null)) {

@@ -49,7 +49,8 @@ public class Cart<K, V extends CartItem> {
 
     public void removeItem(K key) {
         V item = map.get(key);
-        if (item.getQuantity() <= 1) {
+        if (item == null) return;
+        else if (item.getQuantity() <= 1) {
             map.remove(key);
         }
         else {

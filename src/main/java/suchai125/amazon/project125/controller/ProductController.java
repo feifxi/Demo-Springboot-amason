@@ -128,11 +128,4 @@ public class ProductController {
         model.addAttribute("page","main");
         return "product_list";
     }
-
-
-    @GetMapping("/test_api")
-    public String searchTest(@RequestParam String test){
-        productService.getProductsByName(test);
-        return "test_eiei";
-    }
 }
