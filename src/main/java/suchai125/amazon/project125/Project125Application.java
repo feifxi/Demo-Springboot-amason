@@ -8,7 +8,7 @@ public class Project125Application {
 
 	public static void main(String[] args) {
 		SpringApplication.run(Project125Application.class, args);
-		System.out.println("Server is running!"); // test hello2
+		System.out.println("Server is running!"); // test hellO!
 	}
 
 }
